@@ -1,5 +1,6 @@
 // UI Vars 
 const postDiv3 = document.getElementById('thePosts');
+const loader = document.getElementById('loader');
 
 //Load Every thing ....
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,11 +16,12 @@ function load_fromPlaceHolder() {
     .then((res) => { return res.json(); })
     .then((posts) => {
         let output = '';
+        loader.style.display = 'none';
         posts.forEach(function(post) {
             output += `
                 <div class="ui divided items" id="myPost">
                 <div class="item">
-                <div class="image"> <img src="https://picsum.photos/200/300"> </div>
+                <div class="image"> <img src="https://picsum.photos/300/200"> </div>
                 <div class="content">
                 <a class="header" href="#" id="bTitle"> ${post.title} </a>
                 <div class="meta">
