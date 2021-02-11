@@ -8,6 +8,7 @@
     <!-- Semantic CDN -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="asset/css/timerAnalog.css"/>
 </head>
 
 <body>
@@ -42,7 +43,12 @@
             <div class="header">
                 Current Time
             </div>
-            <p id="timerDemo">TIme Will Load Here ...</p>
+            <p id="timerDemo">
+                <div id="hourHand"></div>
+                <div id="minuteHand"></div>
+                <div id="secondHand"></div>
+                <img src="asset/img/minimalist_clock_face.png" alt="Time will be available soon" width="150rem">
+            </p>
         </div>
 
         <!-- All Blogs  -->
@@ -69,7 +75,7 @@
 
         <!-- Our Scripts  -->
         <script src="./asset/js/loadPostsAPI.js"></script>
-
+        <script src="./asset/js/timerAnalog.js"></script>
 </body>
 
 </html>
