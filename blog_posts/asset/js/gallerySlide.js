@@ -15,25 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function loadImageFromAPI(){
     imageCounter += 1;
+
+    try{
+        // console.log(slide.firstElementChild.lastElementChild.className == 'carousel-item active');
+        if (slide.firstElementChild.lastElementChild.className == 'carousel-item active')
+            slide.firstElementChild.lastElementChild.classList.remove('active');
+            
+        // console.log(slide.firstElementChild.lastElementChild.className == 'carousel-item active');
+    }catch(e){};
     
-    fetch('https://picsum.photos/1920/1280?random=' + imageCounter.toString())
-    .then(res => {
-        console.log(imageCounter);
-        loader.style.display = 'none';
-        try{
-            slide.firstElementChild.children[slide.firstElementChild.childElementCount - 1].className = 'carousel-item';
-        } catch(e){
-            console.log(e);
-        }
-    
-        output = `
-        <div class="carousel-item active">
-        <img src="https://picsum.photos/1920/1280?random=${imageCounter.toString()}" width="100%">
-        </div>
-        `;
-        slide.firstElementChild.innerHTML += output;
-        
-        slide.firstElementChild.children[slide.firstElementChild.childElementCount - 2].className = 'carousel-item';
-        
-    })
+    output = `
+    <div class="carousel-item">
+    <img src="https://picsum.photos/1920/1280?random=${imageCounter.toString()}" width="100%">
+    </div>
+    `;
+    slide.firstElementChild.innerHTML += output;
+    // console.log(slide.firstElementChild.lastElementChild);
+    if (imageCounter < 3)
+        slide.firstElementChild.lastElementChild.classList.add('active');
 }
