@@ -37,7 +37,6 @@ function load_fromPlaceHolder() {
                 //same as previous code
                 output += ` `; // same code as previous with few update
         });
-        console.log(output);
         postDiv3.innerHTML += output;
     })
     .catch((err) => { console.log(err); })

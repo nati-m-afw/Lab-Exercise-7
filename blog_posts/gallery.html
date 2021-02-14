@@ -8,7 +8,9 @@
     <!-- Semantic CDN -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/timerAnalog.css"/>
+    <link rel="stylesheet" href="asset/css/gallerySlide.css">
 </head>
 
 <body>
@@ -18,10 +20,10 @@
         <a class="item" href="index.html">
           Home
         </a>
-        <a class="active item" href="api.html">
+        <a class="item" href="api.html">
             API
         </a>
-        <a class="item" href="gallery.html">
+        <a class="active item" href="gallery.html">
             Gallery
         </a>
         <div class="right menu">
@@ -58,14 +60,27 @@
         <div class="ui top attached segment">
 
             <div class="ui green message">
-                <i class="star icon"></i> All Blogs From JSON placeholder API
+                <i class="star icon"></i> All Images From Lorem Picsum API
             </div>
             
+            <!-- Loader -->
             <div class="ui active centered inline loader" id="loader"></div>
 
-            <div class="ui divided items" id="thePosts">
-                <!-- Content here  -->
+            <div id="MySlide" class="carousel slide my-4" data-ride="carousel" data-interval="false">
+                <!-- Images -->
+                <div class="carousel-inner text-center"></div>
+            
+                <a class="carousel-control-prev" href="#MySlide" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-info" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#MySlide" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon bg-info" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    <span></span>
+                </a>
             </div>
+    
 
 
         </div>
@@ -75,9 +90,12 @@
 
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <!-- Our Scripts  -->
-        <script src="./asset/js/loadPostsAPI.js"></script>
+        <script src="./asset/js/gallerySlide.js"></script>
         <script src="./asset/js/timerAnalog.js"></script>
 </body>
 
